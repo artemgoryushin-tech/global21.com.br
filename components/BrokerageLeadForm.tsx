@@ -10,6 +10,7 @@ type BrokerageLeadFormProps = {
   requestType?: string;
   title?: string;
   description?: string;
+  compact?: boolean;
 };
 
 type SubmitState = "idle" | "loading" | "success" | "error";
@@ -57,7 +58,8 @@ export function BrokerageLeadForm({
   contextSlug = "afiliadospro-brasil",
   requestType = "white-label brokerage platform",
   title = "Solicitar contato",
-  description = "Compartilhe seus dados e o contexto do projeto. A solicitação será enviada ao CRM para follow-up."
+  description = "Compartilhe seus dados e o contexto do projeto. A solicitação será enviada ao CRM para follow-up.",
+  compact = false
 }: BrokerageLeadFormProps) {
   const generatedId = useId().replace(/:/g, "");
   const idPrefix = formId ?? `lead-${generatedId}`;
@@ -124,15 +126,26 @@ export function BrokerageLeadForm({
   }
 
   return (
-    <section id={formId} className="surface-card scroll-mt-24 rounded-[2rem] p-7 md:p-10">
+    <section
+      id={formId}
+      className={`@container surface-card scroll-mt-24 rounded-[2rem] ${
+        compact ? "p-5 md:p-6" : "p-7 md:p-10"
+      }`}
+    >
       <div className="flex flex-col gap-3">
-        <p className="text-xs font-black uppercase tracking-[0.18em] text-brand">CRM lead form</p>
-        <h2 className="text-balance text-3xl font-black tracking-tight text-ink">{title}</h2>
-        <p className="max-w-3xl text-sm leading-7 text-muted">{description}</p>
+        <p className="w-fit rounded-full border border-brand/15 bg-brand/5 px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-brand">
+          Próximo nível
+        </p>
+        <h2 className={`text-balance font-black tracking-tight text-ink ${compact ? "text-2xl" : "text-3xl"}`}>
+          {title}
+        </h2>
+        <p className={`${compact ? "text-sm leading-6" : "max-w-3xl text-sm leading-7"} text-muted`}>
+          {description}
+        </p>
       </div>
 
-      <form className="mt-7 grid gap-5" onSubmit={handleSubmit}>
-        <div className="grid gap-4 md:grid-cols-2">
+      <form className={`${compact ? "mt-5 gap-4" : "mt-7 gap-5"} grid`} onSubmit={handleSubmit}>
+        <div className="grid gap-4 @2xl:grid-cols-2">
           <Field label="Nome" htmlFor={`${idPrefix}-first-name`} required>
             <input
               id={`${idPrefix}-first-name`}
@@ -140,7 +153,7 @@ export function BrokerageLeadForm({
               autoComplete="name"
               placeholder="Seu nome"
               required
-              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-bold text-ink outline-brand"
+              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand"
             />
           </Field>
           <Field label="Email" htmlFor={`${idPrefix}-email`} required>
@@ -151,20 +164,20 @@ export function BrokerageLeadForm({
               autoComplete="email"
               placeholder="nome@empresa.com"
               required
-              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-bold text-ink outline-brand"
+              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand"
             />
           </Field>
         </div>
 
         <PhoneNumberField id={`${idPrefix}-phone`} name="phone" label="Telefone" required />
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 @2xl:grid-cols-2">
           <Field label="Empresa ou projeto" htmlFor={`${idPrefix}-company`}>
             <input
               id={`${idPrefix}-company`}
               name="company_name"
-              placeholder="Corretora, time afiliado, fintech..."
-              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-bold text-ink outline-brand"
+              placeholder="Empresa, time afiliado..."
+              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand"
             />
           </Field>
           <Field label="Telegram" htmlFor={`${idPrefix}-telegram`}>
@@ -172,7 +185,7 @@ export function BrokerageLeadForm({
               id={`${idPrefix}-telegram`}
               name="tg"
               placeholder="@usuario"
-              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-bold text-ink outline-brand"
+              className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand"
             />
           </Field>
         </div>
@@ -182,15 +195,15 @@ export function BrokerageLeadForm({
             id={`${idPrefix}-notes`}
             name="comment"
             placeholder="Regiões alvo, pagamentos, CRM, apps, prazo de lançamento..."
-            className="min-h-28 w-full rounded-2xl border border-line bg-white px-4 py-3 text-base font-bold text-ink outline-brand"
+            className={`${compact ? "min-h-24" : "min-h-28"} w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand`}
           />
         </Field>
 
-        <label className="flex items-start gap-3 rounded-2xl bg-cream/80 p-4 text-sm leading-7">
+        <label className="flex items-start gap-3 rounded-2xl bg-cream/80 p-4 text-sm leading-6">
           <input name="terms_agree" type="checkbox" required className="mt-1 h-5 w-5 shrink-0 accent-brand" />
           <span className="font-semibold text-muted">
-            Concordo em ser contatado sobre estruturação de plataforma/corretora e entendo que isso não é consultoria
-            jurídica, financeira ou de investimento.
+            Concordo em ser contatado sobre plataforma/corretora white label e entendo que isso não é consultoria
+            jurídica ou financeira.
           </span>
         </label>
 
@@ -199,7 +212,7 @@ export function BrokerageLeadForm({
           disabled={status === "loading"}
           className="inline-flex w-full items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-black text-white shadow-soft transition hover:bg-ink disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {status === "loading" ? "Enviando..." : "Enviar solicitação"}
+          {status === "loading" ? "Enviando..." : "Ir para o próximo nível"}
         </button>
 
         {message ? (

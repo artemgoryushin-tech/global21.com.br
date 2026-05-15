@@ -14,6 +14,7 @@ export function BeBrokerCTA({ compact = false, horizontal = false, formId }: BeB
     <div className={horizontal ? "w-full" : compact ? "max-w-xl" : "w-full"}>
       <BrokerageLeadForm
         formId={formId}
+        compact={compact}
         contextName="AfiliadosPro Brasil white label"
         contextSlug="afiliadospro-white-label"
         requestType="white-label broker ownership"

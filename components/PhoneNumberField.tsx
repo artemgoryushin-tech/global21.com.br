@@ -108,14 +108,14 @@ export function PhoneNumberField({ id, name, label, required }: PhoneNumberField
   }
 
   return (
-    <div className="grid gap-2">
+    <div className="@container grid gap-2">
       <label className="text-xs font-black uppercase tracking-[0.14em] text-muted" htmlFor={id}>
         {label}
         {required ? <span className="text-brand"> *</span> : null}
       </label>
-      <div className="grid gap-2 sm:grid-cols-[12rem_1fr]">
+      <div className="grid gap-2 @xl:grid-cols-[11rem_1fr]">
         <select
-          className="min-w-0 rounded-2xl border border-line bg-white px-4 py-3 text-sm font-black text-ink outline-brand"
+          className="min-w-0 rounded-2xl border border-line bg-white px-4 py-3 text-sm font-black text-ink outline-brand transition focus:border-brand"
           value={country}
           aria-label="País do telefone"
           onChange={(event) => handleCountryChange(event.target.value)}
@@ -129,7 +129,7 @@ export function PhoneNumberField({ id, name, label, required }: PhoneNumberField
         <input
           ref={inputRef}
           id={id}
-          className={`min-w-0 rounded-2xl border bg-white px-4 py-3 text-base font-bold text-ink outline-brand ${
+          className={`min-w-0 rounded-2xl border bg-white px-4 py-3 text-sm font-bold text-ink outline-brand transition focus:border-brand ${
             isInvalid && touched ? "border-brand" : "border-line"
           }`}
           type="tel"
@@ -152,7 +152,7 @@ export function PhoneNumberField({ id, name, label, required }: PhoneNumberField
         </p>
       ) : (
         <p id={`${id}-hint`} className="text-xs font-semibold leading-5 text-muted">
-          O país é detectado automaticamente, mas pode ser alterado antes do envio.
+          País detectado automaticamente. Altere se necessário.
         </p>
       )}
     </div>
