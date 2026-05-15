@@ -416,23 +416,23 @@ export function BrandReviewVisual({
   const asset = brandReviewIllustration(slug);
 
   return (
-    <div className="surface-card-strong min-w-0 overflow-hidden rounded-[2rem] p-5 md:p-6">
+    <div className="@container surface-card-strong min-w-0 overflow-hidden rounded-[2rem] p-5 md:p-6">
       <IllustrationImage
         asset={asset}
         className="aspect-[1.65]"
         imageClassName="object-contain object-center"
       />
-      <div className="mt-4 grid min-w-0 grid-cols-1 gap-3 2xl:grid-cols-2">
-        <div className="flex min-w-0 items-center gap-3 rounded-2xl bg-white p-4">
+      <div className="mt-4 grid min-w-0 grid-cols-1 gap-3 @2xl:grid-cols-2">
+        <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-2xl bg-white p-4">
           <BrandLogo slug={slug} name={name} size="md" />
           <div className="min-w-0">
-            <p className="text-xs font-black uppercase tracking-[0.16em] text-brand">Análise de marca</p>
+            <p className="text-xs font-black uppercase leading-5 tracking-[0.08em] text-brand">Análise de marca</p>
             <p className="mt-1 text-balance text-lg font-black leading-snug tracking-tight text-ink">{name}</p>
           </div>
         </div>
         <div className="min-w-0 rounded-2xl bg-ink p-4 text-white">
-          <p className="text-xs font-black uppercase tracking-[0.16em] text-white/60">Busca alvo</p>
-          <p className="mt-2 text-balance text-sm font-black leading-6 text-white/90">{keyword}</p>
+          <p className="text-xs font-black uppercase leading-5 tracking-[0.08em] text-white/60">Busca alvo</p>
+          <p className="mt-2 break-words text-sm font-black leading-6 text-white/90">{keyword}</p>
         </div>
       </div>
     </div>
