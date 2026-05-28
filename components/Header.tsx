@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { navigation, siteConfig } from "@/data/site";
 
@@ -10,13 +9,10 @@ export function Header() {
           href="/"
           className="flex items-center gap-3 text-lg font-black tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"
         >
-          <Image
-            src="/logo.png"
-            alt={`${siteConfig.name} logo`}
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-2xl shadow-soft"
-            priority
+          <span
+            aria-hidden="true"
+            className="h-10 w-10 shrink-0 rounded-2xl bg-cover bg-center shadow-soft"
+            style={{ backgroundImage: "url('/logo.png')" }}
           />
           <span>{siteConfig.name}</span>
         </Link>

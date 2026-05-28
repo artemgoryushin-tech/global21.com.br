@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { navigation, siteConfig } from "@/data/site";
 
@@ -15,12 +14,10 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt={`${siteConfig.name} logo`}
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-2xl"
+            <span
+              aria-hidden="true"
+              className="h-10 w-10 shrink-0 rounded-2xl bg-cover bg-center"
+              style={{ backgroundImage: "url('/logo.png')" }}
             />
             <p className="text-xl font-black">{siteConfig.name}</p>
           </div>
