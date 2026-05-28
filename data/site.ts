@@ -9,6 +9,7 @@ export const siteConfig = {
 export const navigation = [
   { label: "Programas", href: "/programas" },
   { label: "Análises", href: "/reviews" },
+  { label: "Clone Script", href: "/clone-script" },
   { label: "Guias", href: "/guias" },
   { label: "Ferramentas", href: "/ferramentas" },
   { label: "White Label", href: "/white-label/solucao-white-label-para-broker" }
@@ -1250,6 +1251,298 @@ export type FaqContent = {
   question: string;
   answer: string;
 };
+
+export type CloneScriptPage = {
+  slug: string;
+  brandName: string;
+  brandSlug: string;
+  title: string;
+  description: string;
+  keyword: string;
+  productModel: string;
+  bestFor: string;
+  customization: string[];
+  legalBoundaries: string[];
+  sections: Array<{ title: string; body: string }>;
+  faq: FaqContent[];
+  relatedLinks: Array<{ label: string; href: string }>;
+};
+
+const cloneScriptDisclaimer =
+  "O termo clone script é usado como referência de busca para afiliados e operadores que procuram uma solução white label com lógica de produto semelhante. Não recomendamos copiar marca, layout, logotipo, domínio, materiais ou propriedade intelectual de terceiros.";
+
+export const cloneScriptPages: CloneScriptPage[] = [
+  {
+    slug: "pocket-option-clone-script",
+    brandName: "Pocket Option",
+    brandSlug: "pocket-option-affiliate-program",
+    title: "Clone script Pocket Option: alternativa white label para sua marca",
+    description:
+      "Entenda como uma solução white label pode criar uma plataforma própria inspirada na lógica de trading de curto prazo, sem copiar marca, design ou propriedade intelectual da Pocket Option.",
+    keyword: "clone script Pocket Option",
+    productModel: "Trading de curto prazo, funil de FTD e painel de afiliados",
+    bestFor: "Afiliados que já geram tráfego para opções digitais e querem testar uma marca própria.",
+    customization: [
+      "Identidade visual, cores, domínio e nome da sua marca",
+      "Fluxo de cadastro, CRM, funil de depósito e notificações",
+      "Painel operacional, relatórios, campanhas e módulos de afiliados",
+      "Métodos de pagamento, páginas de destino e suporte em português"
+    ],
+    legalBoundaries: [
+      "Não usar logotipo, nome, layout proprietário ou domínio parecido com Pocket Option",
+      "Não prometer lucro, renda garantida ou resultado de trading",
+      "Não copiar materiais, criativos, textos ou telas de terceiros",
+      "Validar regras jurídicas, pagamentos, KYC e comunicação de risco antes do lançamento"
+    ],
+    sections: [
+      {
+        title: "O que significa clone script nesse contexto",
+        body: `${cloneScriptDisclaimer} A leitura correta é: usar uma infraestrutura white label para lançar uma plataforma própria, com produto, funil e operação configurados para o seu público.`
+      },
+      {
+        title: "O que pode ser personalizado em uma white label",
+        body: "Você pode usar branding próprio, paleta de cores, domínio, páginas, campanhas, CRM, integrações, métodos de pagamento e regras comerciais. A vantagem é acelerar o lançamento sem construir toda a tecnologia do zero."
+      },
+      {
+        title: "Quando faz sentido para afiliados",
+        body: "A ideia faz mais sentido quando o afiliado já conhece CAC, FTD, qualidade do trader e canais de aquisição. Nesse estágio, uma marca própria pode capturar mais valor do que promover apenas CPA ou RevShare de terceiros."
+      }
+    ],
+    faq: [
+      {
+        question: "Posso criar uma cópia da Pocket Option?",
+        answer:
+          "Não. A proposta é lançar uma marca própria em white label, sem copiar nome, logotipo, layout, domínio, materiais ou propriedade intelectual da Pocket Option."
+      },
+      {
+        question: "Posso usar cores e branding próprios?",
+        answer:
+          "Sim. Em uma solução white label, você pode trabalhar com sua identidade visual, cores, domínio, páginas e comunicação da sua marca."
+      }
+    ],
+    relatedLinks: [
+      { label: "Pocket Option afiliados", href: "/reviews/pocket-option-affiliate-program" },
+      { label: "Pocket Option vs Quotex", href: "/guias/pocket-option-vs-quotex-afiliados" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "quotex-clone-script",
+    brandName: "Quotex",
+    brandSlug: "quotex-affiliate-program",
+    title: "Clone script Quotex: solução white label para broker",
+    description:
+      "Veja como avaliar uma alternativa white label ao modelo de trading de curto prazo, com marca própria e sem copiar a Quotex.",
+    keyword: "clone script Quotex",
+    productModel: "Trading de curto prazo, RevShare, campanhas e funil de depósitos",
+    bestFor: "Compradores de mídia, comunidades e afiliados que já validaram tráfego para trading.",
+    customization: [
+      "Marca, domínio, cores e páginas comerciais próprias",
+      "CRM, relatórios, campanhas, links e segmentação por fonte",
+      "Fluxo de onboarding, depósito, suporte e mensagens transacionais",
+      "Materiais de aquisição alinhados às regras da sua operação"
+    ],
+    legalBoundaries: [
+      "Não usar marca, logotipo ou interface proprietária da Quotex",
+      "Não criar domínio, anúncio ou página que pareça oficial",
+      "Não reutilizar contrato, criativos ou materiais de terceiros",
+      "Manter avisos de risco e revisão jurídica antes de escalar tráfego"
+    ],
+    sections: [
+      {
+        title: "Clone script não é cópia de marca",
+        body: `${cloneScriptDisclaimer} Para buscas como clone script Quotex, o caminho seguro é pensar em plataforma white label com recursos semelhantes de funil, painel e gestão comercial, mas identidade totalmente própria.`
+      },
+      {
+        title: "Onde a white label ajuda",
+        body: "A white label pode reduzir tempo de implantação de plataforma, CRM, relatórios, campanhas, pagamentos e suporte operacional. Isso permite testar marca, oferta e aquisição sem desenvolver todo o produto internamente."
+      },
+      {
+        title: "Como medir se vale a pena",
+        body: "Compare sua receita como afiliado com CAC, LTV, retenção, suporte, chargeback e custos de operação. Se você já gera FTDs previsíveis, a marca própria entra como uma hipótese B2B para capturar mais margem."
+      }
+    ],
+    faq: [
+      {
+        question: "Clone script Quotex é legal?",
+        answer:
+          "Depende do que você chama de clone. Copiar marca, layout e materiais não é recomendado. Usar uma solução white label com marca própria e tecnologia licenciada é uma abordagem mais segura."
+      },
+      {
+        question: "A plataforma pode ter visual diferente?",
+        answer:
+          "Sim. O objetivo é justamente usar branding, cores, domínio e comunicação próprios, sem confundir o usuário com uma marca de terceiros."
+      }
+    ],
+    relatedLinks: [
+      { label: "Quotex afiliados", href: "/reviews/quotex-affiliate-program" },
+      { label: "Programas opções digitais", href: "/programas/programas-afiliados-opcoes-digitais" },
+      { label: "Como abrir corretora", href: "/white-label/como-abrir-corretora-online" }
+    ]
+  },
+  {
+    slug: "iq-option-clone-script",
+    brandName: "IQ Option",
+    brandSlug: "iq-option-affiliate-program",
+    title: "Clone script IQ Option: alternativa white label com marca própria",
+    description:
+      "Critérios para lançar uma plataforma white label inspirada em apps de trading multi-produto, sem copiar a marca IQ Option.",
+    keyword: "clone script IQ Option",
+    productModel: "Broker multi-produto, app de trading, CRM e funil de retenção",
+    bestFor: "Operadores que querem uma experiência de marca própria para público de trading e investimentos.",
+    customization: [
+      "Naming, identidade visual, telas públicas e domínio próprio",
+      "CRM, onboarding, campanhas, relatórios e suporte",
+      "Produtos habilitados conforme fornecedor e estratégia comercial",
+      "Mensagens de risco, conteúdo educativo e páginas por mercado"
+    ],
+    legalBoundaries: [
+      "Não usar marca, ícones, layout ou identidade visual da IQ Option",
+      "Não simular app oficial ou comunicação de terceiros",
+      "Não prometer performance financeira ao usuário",
+      "Confirmar produto, jurisdição, pagamentos e compliance com especialistas"
+    ],
+    sections: [
+      {
+        title: "Uma alternativa white label, não uma cópia",
+        body: `${cloneScriptDisclaimer} Para IQ Option clone script, a interpretação mais prudente é criar uma plataforma white label com marca própria e recursos adequados ao seu público.`
+      },
+      {
+        title: "Branding e produto",
+        body: "A white label permite adaptar cores, marca, páginas, domínio, CRM e experiência comercial. O produto final deve ter identidade própria e comunicação clara, sem sugerir relação oficial com IQ Option."
+      },
+      {
+        title: "Ponto crítico de operação",
+        body: "Quanto mais amplo o produto, maior a necessidade de suporte, documentação, treinamento, controle de risco, rastreamento e processos de compliance para afiliados e campanhas."
+      }
+    ],
+    faq: [
+      {
+        question: "Posso usar o nome IQ Option na minha plataforma?",
+        answer:
+          "Não. O nome deve aparecer apenas como referência editorial/SEO quando apropriado. A plataforma precisa operar com marca, domínio e comunicação próprios."
+      },
+      {
+        question: "White label permite customizar cores?",
+        answer:
+          "Sim. Cores, marca, domínio, páginas e materiais podem ser personalizados para a sua operação, dentro do escopo do fornecedor."
+      }
+    ],
+    relatedLinks: [
+      { label: "IQ Option afiliados", href: "/reviews/iq-option-affiliate-program" },
+      { label: "Programa afiliado broker", href: "/programas/programa-de-afiliados-broker" },
+      { label: "Quanto custa lançar", href: "/white-label/quanto-custa-lancar-plataforma-trading" }
+    ]
+  },
+  {
+    slug: "olymp-trade-clone-script",
+    brandName: "Olymp Trade",
+    brandSlug: "olymp-trade-affiliate-program",
+    title: "Clone script Olymp Trade: white label para plataforma de trading",
+    description:
+      "Como pensar em uma solução white label para plataforma de trading com marca própria, sem copiar Olymp Trade.",
+    keyword: "clone script Olymp Trade",
+    productModel: "Trading, educação, app e aquisição por afiliados",
+    bestFor: "Afiliados com conteúdo educativo e funis de aquisição para traders iniciantes.",
+    customization: [
+      "Marca, cores, domínio, páginas e materiais educativos próprios",
+      "CRM, funil de cadastro, suporte e relatórios por campanha",
+      "Módulo de afiliados, páginas de destino e segmentação por país",
+      "Conteúdo de risco e onboarding alinhado ao público"
+    ],
+    legalBoundaries: [
+      "Não copiar design, marca, logo ou materiais da Olymp Trade",
+      "Não confundir o usuário com uma página oficial",
+      "Não usar promessas de lucro ou renda fácil",
+      "Revisar disponibilidade de produto, pagamentos e regras locais"
+    ],
+    sections: [
+      {
+        title: "Como usar a intenção clone script com segurança",
+        body: `${cloneScriptDisclaimer} A intenção comercial pode ser atendida com uma solução white label que tenha identidade visual própria e infraestrutura licenciada.`
+      },
+      {
+        title: "Educação e onboarding",
+        body: "Para públicos iniciantes, a experiência precisa explicar risco, produto, cadastro, depósito e suporte. Uma marca própria pode criar conteúdo educativo e campanhas alinhadas ao seu posicionamento."
+      },
+      {
+        title: "Aquisição por afiliados",
+        body: "Se você opera rede de afiliados, avalie painel, subIDs, campanhas, postback, relatórios e regras de compliance para evitar tráfego de baixa qualidade."
+      }
+    ],
+    faq: [
+      {
+        question: "Clone script Olymp Trade significa copiar a Olymp Trade?",
+        answer:
+          "Não. A abordagem recomendada é uma white label com tecnologia e identidade próprias, sem copiar elementos protegidos de terceiros."
+      },
+      {
+        question: "Posso adaptar a plataforma para meu público?",
+        answer:
+          "Sim. Branding, páginas, cores, domínio, materiais e funis podem ser adaptados para a estratégia da sua marca."
+      }
+    ],
+    relatedLinks: [
+      { label: "Olymp Trade afiliados", href: "/reviews/olymp-trade-affiliate-program" },
+      { label: "Fontes de tráfego", href: "/guias/melhores-fontes-trafego-broker-afiliados" },
+      { label: "White label broker", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "deriv-clone-script",
+    brandName: "Deriv",
+    brandSlug: "deriv-affiliate-program",
+    title: "Clone script Deriv: alternativa white label multi-produto",
+    description:
+      "Entenda quando uma solução white label multi-produto pode fazer sentido para operadores e afiliados avançados, sem copiar a Deriv.",
+    keyword: "clone script Deriv",
+    productModel: "Multi-produto, CFDs, opções, API e rede de parceiros",
+    bestFor: "Comunidades, afiliados técnicos e operadores que precisam de estrutura mais avançada.",
+    customization: [
+      "Marca, domínio, cores, páginas e jornada de usuário próprias",
+      "Produtos e integrações conforme fornecedor white label",
+      "CRM, relatórios, API, campanhas e suporte operacional",
+      "Documentação, conteúdo técnico e gestão de parceiros"
+    ],
+    legalBoundaries: [
+      "Não usar marca, interface, materiais ou documentação proprietária da Deriv",
+      "Não sugerir parceria oficial sem autorização",
+      "Não promover produtos avançados sem aviso de risco",
+      "Validar regras técnicas, jurídicas, KYC, pagamentos e suporte"
+    ],
+    sections: [
+      {
+        title: "White label para uma operação mais ampla",
+        body: `${cloneScriptDisclaimer} Em buscas por clone script Deriv, o ponto importante é avaliar se você precisa de uma plataforma white label multi-produto, com gestão de parceiros, relatórios e integrações mais robustas.`
+      },
+      {
+        title: "API, comunidade e produto",
+        body: "Uma operação com comunidade técnica ou produto avançado precisa de documentação, suporte, segmentação de usuários e clareza sobre risco. A marca própria deve explicar o produto sem copiar comunicação de terceiros."
+      },
+      {
+        title: "Governança antes de escalar",
+        body: "Quanto mais avançado o produto, maior a necessidade de governança: termos, suporte, antifraude, gestão de afiliados, pagamentos, risco e auditoria de campanhas."
+      }
+    ],
+    faq: [
+      {
+        question: "Deriv clone script é indicado para iniciantes?",
+        answer:
+          "Geralmente não. Uma operação multi-produto exige mais suporte, controle de risco, documentação e gestão operacional."
+      },
+      {
+        question: "Posso lançar uma marca com recursos semelhantes?",
+        answer:
+          "Você pode lançar uma marca própria usando tecnologia white label e recursos contratados, desde que não copie marca, interface, materiais ou propriedade intelectual de terceiros."
+      }
+    ],
+    relatedLinks: [
+      { label: "Deriv afiliados", href: "/reviews/deriv-affiliate-program" },
+      { label: "Sub-afiliados", href: "/programas/programas-afiliados-com-subafiliados" },
+      { label: "Abrir corretora online", href: "/white-label/como-abrir-corretora-online" }
+    ]
+  }
+];
 
 export type RankingSeoContent = {
   directAnswer: string;

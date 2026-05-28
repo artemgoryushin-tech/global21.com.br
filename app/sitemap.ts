@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { editorialProfile, guides, programs, rankings, siteConfig, whiteLabelPages } from "@/data/site";
+import { cloneScriptPages, editorialProfile, guides, programs, rankings, siteConfig, whiteLabelPages } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const editorialDate = new Date(editorialProfile.lastUpdated);
@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/programas",
     "/reviews",
+    "/clone-script",
     "/guias",
     "/white-label",
     "/ferramentas",
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicRoutes = [
     ...rankings.map((item) => `/programas/${item.slug}`),
     ...programs.map((item) => `/reviews/${item.slug}`),
+    ...cloneScriptPages.map((item) => `/clone-script/${item.slug}`),
     ...guides.map((item) => `/guias/${item.slug}`),
     ...whiteLabelPages.map((item) => `/white-label/${item.slug}`)
   ];
@@ -28,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const isHome = route === "";
     const isMoneyPage = route.startsWith("/programas/");
     const isReview = route.startsWith("/reviews/");
+    const isCloneScript = route.startsWith("/clone-script/");
     const isGuide = route.startsWith("/guias/");
     const isWhiteLabel = route.startsWith("/white-label/");
 
@@ -39,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.domain}${route}`,
       lastModified: review ? new Date(review.lastChecked) : editorialDate,
       changeFrequency: isHome || isMoneyPage ? "daily" : "weekly",
-      priority: isHome ? 1 : isMoneyPage ? 0.95 : isReview ? 0.85 : isGuide || isWhiteLabel ? 0.75 : 0.7
+      priority: isHome ? 1 : isMoneyPage ? 0.95 : isCloneScript ? 0.9 : isReview ? 0.85 : isGuide || isWhiteLabel ? 0.75 : 0.7
     };
   });
 }
