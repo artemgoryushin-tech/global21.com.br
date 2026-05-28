@@ -153,68 +153,63 @@ export default async function CloneScriptPage({ params }: PageProps) {
           </div>
         </section>
 
-        <div className="mt-12 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_0.42fr]">
-          <div>
-            <div className="grid gap-6">
-              {page.sections.map((section) => (
-                <section key={section.title} className="surface-card rounded-[2rem] p-7">
-                  <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
-                    {section.title}
-                  </h2>
-                  <p className="mt-4 text-base leading-8 text-muted">{section.body}</p>
-                </section>
+        <div className="mt-12">
+          <div className="grid gap-6">
+            {page.sections.map((section) => (
+              <section key={section.title} className="surface-card rounded-[2rem] p-7">
+                <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
+                  {section.title}
+                </h2>
+                <p className="mt-4 text-base leading-8 text-muted">{section.body}</p>
+              </section>
+            ))}
+          </div>
+
+          <section className="surface-card mt-8 rounded-[2rem] p-7">
+            <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
+              O que pode ser personalizado
+            </h2>
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
+              {page.customization.map((item) => (
+                <div key={item} className="rounded-2xl bg-cream/80 p-4 text-sm font-bold leading-7 text-ink">
+                  {item}
+                </div>
               ))}
             </div>
+          </section>
 
-            <section className="surface-card mt-8 rounded-[2rem] p-7">
-              <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
-                O que pode ser personalizado
-              </h2>
-              <div className="mt-6 grid gap-3 md:grid-cols-2">
-                {page.customization.map((item) => (
-                  <div key={item} className="rounded-2xl bg-cream/80 p-4 text-sm font-bold leading-7 text-ink">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="mt-8 rounded-[2rem] bg-ink p-7 text-white shadow-soft">
-              <h2 className="text-balance text-3xl font-black tracking-tight">
-                Limites legais e de marca
-              </h2>
-              <div className="mt-6 grid gap-3">
-                {page.legalBoundaries.map((item) => (
-                  <div key={item} className="rounded-2xl bg-white/10 p-4 text-sm font-bold leading-7 text-white/80">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="surface-card mt-8 rounded-[2rem] p-7">
-              <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
-                Próximas leituras
-              </h2>
-              <div className="mt-6 grid gap-3 md:grid-cols-3">
-                {page.relatedLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-2xl bg-cream/80 p-4 text-sm font-black text-ink transition hover:bg-brand hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </section>
-
-            <div className="mt-8">
-              <Faq items={page.faq} />
+          <section className="mt-8 rounded-[2rem] bg-ink p-7 text-white shadow-soft">
+            <h2 className="text-balance text-3xl font-black tracking-tight">
+              Limites legais e de marca
+            </h2>
+            <div className="mt-6 grid gap-3">
+              {page.legalBoundaries.map((item) => (
+                <div key={item} className="rounded-2xl bg-white/10 p-4 text-sm font-bold leading-7 text-white/80">
+                  {item}
+                </div>
+              ))}
             </div>
-          </div>
-          <div className="lg:sticky lg:top-24">
-            <BeBrokerCTA compact formId="lead-form" />
+          </section>
+
+          <section className="surface-card mt-8 rounded-[2rem] p-7">
+            <h2 className="text-balance text-3xl font-black tracking-tight text-ink">
+              Próximas leituras
+            </h2>
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              {page.relatedLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl bg-cream/80 p-4 text-sm font-black text-ink transition hover:bg-brand hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <div className="mt-8">
+            <Faq items={page.faq} />
           </div>
         </div>
       </article>
