@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navigation, siteConfig } from "@/data/site";
 
@@ -9,9 +10,14 @@ export function Header() {
           href="/"
           className="flex items-center gap-3 text-lg font-black tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"
         >
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-ink text-sm text-white shadow-soft">
-            AP
-          </span>
+          <Image
+            src="/logo.png"
+            alt={`${siteConfig.name} logo`}
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-2xl shadow-soft"
+            priority
+          />
           <span>{siteConfig.name}</span>
         </Link>
         <nav className="hidden items-center gap-1 rounded-full border border-line bg-white/80 p-1 text-sm font-bold text-muted shadow-sm lg:flex">

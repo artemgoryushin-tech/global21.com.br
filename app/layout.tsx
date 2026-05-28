@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/icon.svg",
-    apple: "/apple-icon.svg"
+    icon: "/favicon.png",
+    apple: "/logo.png"
   },
   openGraph: {
     type: "website",
