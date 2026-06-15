@@ -128,6 +128,22 @@ Autopublish is allowed only after all gates pass:
 
 If any gate fails, leave the branch review-only and report the blocker.
 
+## Cloud Reliability Layer
+
+Local Codex automations can be missed when the owner's computer is powered off, asleep, or offline. GitHub Actions watchdog coverage is therefore part of the operating model.
+
+The repository includes:
+
+- `.github/workflows/content-ops-watchdog.yml`;
+- `scripts/content-ops-cloud-watchdog.mjs`;
+- `docs/content-ops/cloud-reliability.md`.
+
+The watchdog runs in GitHub on the repository default branch, checks the intended content target branch, runs dependency install plus lint/build when possible, inventories remote task branches, and opens a GitHub issue when a blocker needs attention.
+
+This does not replace Codex content production. It prevents silent failures and makes missed or stuck runs visible when the local machine was unavailable.
+
+Release steward rule: if the cloud watchdog opens an issue, treat the affected cycle as blocked or review-only until the issue is read and resolved. Do not autopublish over an unresolved watchdog blocker.
+
 ## Minimum Quality SLA
 
 New or refreshed brand/program pages should include:

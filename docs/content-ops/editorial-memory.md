@@ -15,6 +15,7 @@ Keep entries short, dated, and useful for future automation runs.
 | `brazil-affiliate-content-growth` | Weekly, Friday 10:00 Moscow time | Produce Brazilian Portuguese content improvements |
 | `affiliate-release-steward` | After content-growth days | Verify branches, gates, and controlled autopublish readiness |
 | `affiliate-content-strategy-audit` | Monthly, first Monday 11:00 Moscow time | Cross-site strategic audit |
+| GitHub Actions cloud watchdog | Cloud schedule, independent of local machine | Detect missed/stuck cycles, run checks, and open attention issues |
 
 ## Current Editorial Rules
 
@@ -23,6 +24,7 @@ Keep entries short, dated, and useful for future automation runs.
 - Push reviewable branches, not direct `main` updates.
 - Keep English and Brazilian Portuguese content separated by branch/site.
 - Preserve conservative financial, trading, CFD, forex, crypto, and digital-options risk framing.
+- If the cloud watchdog opens an issue, release steward treats the affected cycle as blocked or review-only until resolved.
 
 ## Completed Runs
 

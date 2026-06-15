@@ -31,6 +31,7 @@ Do not let multiple agents independently edit `data/site.ts` in the same run. It
    - Inspect worktrees, including detached Codex worktrees.
    - Detect local task branches ahead of their intended remote.
    - Check `docs/content-ops/editorial-memory.md` against actual branch state.
+   - Check the latest GitHub Actions watchdog issue/report when available.
    - Do not delete dirty worktrees before salvage/report.
 
 2. Weekly queue
@@ -80,6 +81,7 @@ Do not let multiple agents independently edit `data/site.ts` in the same run. It
 | Source claim unsupported | Soften or omit the claim |
 | Compliance risk | Block autopublish until reviewed |
 | Build failure from native optional dependencies | Report separately from content correctness |
+| Local machine offline during a scheduled run | Read the cloud watchdog report, verify whether a task branch exists, then resume or record the missed cycle |
 
 ## Controlled Autopublish
 
@@ -91,6 +93,14 @@ Autopublish does not mean direct agent publishing. It means:
 4. The steward reports the promoted commit and target branch.
 
 If GitHub PR tooling is unavailable, use git branch promotion and push. Do not rely on `gh`.
+
+## Cloud Watchdog
+
+GitHub Actions watchdog coverage is documented in `docs/content-ops/cloud-reliability.md`. It exists because local Codex automations do not run when the owner's computer is off or asleep.
+
+The watchdog does not write AI content and does not publish. It runs in GitHub, checks the target branch, runs available technical checks, inventories remote task branches, and opens or updates an issue when attention is needed.
+
+If the watchdog reports a blocker, release steward must treat the affected cycle as review-only until the issue is resolved. Do not autopublish over an unresolved watchdog issue.
 
 ## Current Known Recovery Items
 

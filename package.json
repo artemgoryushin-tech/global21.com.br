@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content-ops:watchdog": "node scripts/content-ops-cloud-watchdog.mjs"
   },
   "dependencies": {
     "libphonenumber-js": "1.13.1",

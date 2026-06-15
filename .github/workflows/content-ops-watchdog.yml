@@ -1,0 +1,146 @@
+name: Affiliate Content Ops Watchdog
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: Target branch to check. Leave empty to infer from repository name.
+        required: false
+        type: string
+  schedule:
+    - cron: "15 6 * * 1"
+    - cron: "45 10 * * 2,5"
+    - cron: "45 8 * * 4"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: content-ops-watchdog-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    name: Cloud watchdog
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout workflow branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve target branch
+        id: resolve
+        shell: bash
+        env:
+          REQUESTED_TARGET_BRANCH: ${{ inputs.target_branch }}
+        run: |
+          set -euo pipefail
+
+          target="${REQUESTED_TARGET_BRANCH:-}"
+          site_key=""
+
+          if [ -z "$target" ]; then
+            case "$GITHUB_REPOSITORY" in
+              *global21*) target="main"; site_key="br" ;;
+              *intuitiveappz*) target="codex/english-version"; site_key="en" ;;
+              *) target="$GITHUB_REF_NAME"; site_key="en" ;;
+            esac
+          fi
+
+          if [ -z "$site_key" ]; then
+            case "$target" in
+              main) site_key="br" ;;
+              *) site_key="en" ;;
+            esac
+          fi
+
+          cp scripts/content-ops-cloud-watchdog.mjs "$RUNNER_TEMP/content-ops-cloud-watchdog.mjs"
+          echo "target_branch=$target" >> "$GITHUB_OUTPUT"
+          echo "site_key=$site_key" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout target branch
+        shell: bash
+        env:
+          TARGET_BRANCH: ${{ steps.resolve.outputs.target_branch }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "+refs/heads/${TARGET_BRANCH}:refs/remotes/origin/${TARGET_BRANCH}" "+refs/heads/codex/auto-*:refs/remotes/origin/codex/auto-*"
+          git checkout --force -B watchdog-target "origin/${TARGET_BRANCH}"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        id: npm_ci
+        continue-on-error: true
+        run: npm ci
+
+      - name: Run lint
+        id: lint
+        if: steps.npm_ci.outcome == 'success'
+        continue-on-error: true
+        run: npm run lint
+
+      - name: Run build
+        id: build
+        if: steps.npm_ci.outcome == 'success'
+        continue-on-error: true
+        run: npm run build
+
+      - name: Generate watchdog report
+        id: watchdog
+        env:
+          TARGET_BRANCH: ${{ steps.resolve.outputs.target_branch }}
+          SITE_KEY: ${{ steps.resolve.outputs.site_key }}
+          CHECK_NPM_CI_OUTCOME: ${{ steps.npm_ci.outcome }}
+          CHECK_LINT_OUTCOME: ${{ steps.lint.outcome }}
+          CHECK_BUILD_OUTCOME: ${{ steps.build.outcome }}
+        run: node "$RUNNER_TEMP/content-ops-cloud-watchdog.mjs"
+
+      - name: Upload watchdog report
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-ops-watchdog-report
+          path: content-ops-watchdog-report.md
+
+      - name: Create or update attention issue
+        if: steps.watchdog.outputs.needs_attention == 'true'
+        uses: actions/github-script@v7
+        continue-on-error: true
+        env:
+          ISSUE_TITLE: ${{ steps.watchdog.outputs.issue_title }}
+        with:
+          script: |
+            const fs = require("fs");
+            const title = process.env.ISSUE_TITLE;
+            const body = fs.readFileSync("content-ops-watchdog-report.md", "utf8");
+            const { owner, repo } = context.repo;
+            const existing = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100
+            });
+            const issue = existing.data.find((item) => item.title === title && !item.pull_request);
+            if (issue) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title,
+                body
+              });
+            }
