@@ -15,11 +15,32 @@ Never push automated content directly to `main`. Push reviewable dated branches.
 
 | Role | Purpose | Default output |
 | --- | --- | --- |
+| Editorial orchestrator | Chooses task, assigns roles, controls branch routing and publish decisions | Weekly brief and final run report |
 | Opportunity scout | Finds new brands, programs, clusters, and creative angles | Ranked report, no code changes by default |
+| Source/fact researcher | Verifies official sources and claim confidence | Source packet |
+| SEO topic architect | Designs clusters, internal links, and cannibalization checks | Topic/link plan |
 | English content growth | Produces small English content improvements | Reviewable branch and commit |
 | Brazil content growth | Produces small pt-BR content improvements | Reviewable branch and commit |
+| Compliance/risk reviewer | Blocks unsupported or unsafe financial/trading claims | Pass/block notes |
 | Content quality monitor | Scores existing pages and identifies maintenance priorities | Ranked quality report, tiny fixes only if safe |
+| Branch/release steward | Verifies remotes, worktrees, task branches, and publish readiness | Publish/review-only decision |
 | Strategy audit | Monthly cross-site editorial planning | Strategic report and next-cycle priorities |
+
+## Orchestrator Model
+
+The main Codex thread is the Editorial Orchestrator and Release Gate. Specialist agents are constrained workers. They can research, draft, localize, score, review, or integrate only within the scope of a structured brief.
+
+The orchestrator owns:
+
+- site selection and work mode;
+- task branch naming;
+- role assignment;
+- source and compliance decisions;
+- final integration when `data/site.ts` is involved;
+- controlled autopublish decisions;
+- final run report and durable memory updates.
+
+Sub-agents must not broaden scope, mix English and Brazil work, publish directly to deploy/base branches, or independently decide unsupported claims are safe.
 
 ## Work Modes
 
@@ -71,6 +92,41 @@ Preferred sources:
 Generic blogs can inspire research but cannot support key factual claims.
 
 If a fact is not confirmed, say it must be confirmed with the affiliate manager. Do not present it as true.
+
+## Branch And Release Safeguards
+
+Use task branches, not permanent role branches:
+
+- English task branches start from `intuitiveappz/codex/english-version` and use `codex/auto-en-content-YYYY-MM-DD`.
+- Brazil task branches start from `global21/main` and use `codex/auto-br-content-YYYY-MM-DD`.
+- English publish target is `intuitiveappz/codex/english-version`.
+- Brazil publish target is `global21/main`.
+
+Before any content-changing run:
+
+- inspect `git status --short --branch`;
+- fetch only the intended remotes;
+- check upstream and remote routing;
+- inventory normal, detached, dirty, and prunable worktrees;
+- detect local task branches ahead of remote;
+- compare branch state with `editorial-memory.md`.
+
+Do not use `origin` for content publishing unless explicitly requested.
+
+## Controlled Autopublish Gates
+
+Autopublish is allowed only after all gates pass:
+
+- source gate;
+- editorial work-mode gate;
+- search-intent and no-cannibalization gate;
+- compliance/risk gate;
+- internal-link gate;
+- technical gate;
+- branch local-vs-remote verification gate;
+- memory update gate.
+
+If any gate fails, leave the branch review-only and report the blocker.
 
 ## Minimum Quality SLA
 
@@ -148,3 +204,5 @@ Every content-changing run should report:
 - Do not duplicate slugs or create near-identical pages for the same keyword.
 - Do not use profit guarantees, easy-income language, or claims that minimize trading risk.
 - Do not copy protected brand assets, interfaces, logos, or trade dress for clone-script pages.
+- Do not delete dirty detached worktrees before salvage/report.
+- Do not publish if local and intended remote branch commits do not match after push.
