@@ -37,7 +37,7 @@ GitHub scheduled workflows run from the repository default branch. To activate t
 
 The workflow then infers the target branch:
 
-- `intuitiveappz.com` checks `codex/english-version`;
+- `intuitiveappz.com` checks `main`;
 - `global21.com.br` checks `main`.
 
 Manual dispatch can override the target branch.

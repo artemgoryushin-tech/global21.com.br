@@ -46,7 +46,7 @@ jobs:
           if [ -z "$target" ]; then
             case "$GITHUB_REPOSITORY" in
               *global21*) target="main"; site_key="br" ;;
-              *intuitiveappz*) target="codex/english-version"; site_key="en" ;;
+              *intuitiveappz*) target="main"; site_key="en" ;;
               *) target="$GITHUB_REF_NAME"; site_key="en" ;;
             esac
           fi

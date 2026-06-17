@@ -6,7 +6,7 @@ This playbook defines how automated content work should improve the English and 
 
 | Site | Language | Base branch | Remote | Auto branch pattern |
 | --- | --- | --- | --- | --- |
-| intuitiveappz.com | English | `intuitiveappz/codex/english-version` | `intuitiveappz` | `codex/auto-en-content-YYYY-MM-DD` |
+| intuitiveappz.com | English | `intuitiveappz/main` | `intuitiveappz` | `codex/auto-en-content-YYYY-MM-DD` |
 | global21.com.br / AfiliadosPro Brasil | Brazilian Portuguese | `global21/main` | `global21` | `codex/auto-br-content-YYYY-MM-DD` |
 
 Never push automated content directly to `main`. Push reviewable dated branches.
@@ -97,9 +97,9 @@ If a fact is not confirmed, say it must be confirmed with the affiliate manager.
 
 Use task branches, not permanent role branches:
 
-- English task branches start from `intuitiveappz/codex/english-version` and use `codex/auto-en-content-YYYY-MM-DD`.
+- English task branches start from `intuitiveappz/main` and use `codex/auto-en-content-YYYY-MM-DD`.
 - Brazil task branches start from `global21/main` and use `codex/auto-br-content-YYYY-MM-DD`.
-- English publish target is `intuitiveappz/codex/english-version`.
+- English publish target is `intuitiveappz/main`.
 - Brazil publish target is `global21/main`.
 
 Before any content-changing run:

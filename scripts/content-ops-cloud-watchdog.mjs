@@ -72,8 +72,8 @@ const expected = siteKey === "br"
     }
   : {
       site: "intuitiveappz.com",
-      publishTarget: "intuitiveappz/codex/english-version",
-      targetBranch: "codex/english-version",
+      publishTarget: "intuitiveappz/main",
+      targetBranch: "main",
       taskPrefix: "origin/codex/auto-en-content-"
     };
 

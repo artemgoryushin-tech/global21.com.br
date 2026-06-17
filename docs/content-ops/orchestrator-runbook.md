@@ -17,7 +17,7 @@ Do not let multiple agents independently edit `data/site.ts` in the same run. It
 
 | Site | Base branch | Task branch | Publish target | Remote |
 | --- | --- | --- | --- | --- |
-| English / intuitiveappz.com | `intuitiveappz/codex/english-version` | `codex/auto-en-content-YYYY-MM-DD` | `intuitiveappz/codex/english-version` | `intuitiveappz` |
+| English / intuitiveappz.com | `intuitiveappz/main` | `codex/auto-en-content-YYYY-MM-DD` | `intuitiveappz/main` | `intuitiveappz` |
 | Brazil / global21.com.br | `global21/main` | `codex/auto-br-content-YYYY-MM-DD` | `global21/main` | `global21` |
 
 `origin` is not a publishing remote for content operations unless the user explicitly asks for it.
@@ -106,7 +106,7 @@ If the watchdog reports a blocker, release steward must treat the affected cycle
 
 As of 2026-06-15:
 
-- `codex/english-version` has been routed to track `intuitiveappz/codex/english-version`.
+- 2026-06-17: English publish target migrated to `intuitiveappz/main`; `codex/english-version` is legacy and should not be used for new production routing.
 - `codex/auto-br-content-2026-06-12` contains local commit `30d800a` but `global21/codex/auto-br-content-2026-06-12` still points at `a3501c4`.
 - Detached Codex worktree `~/.codex/worktrees/a8f4/DropDomain Landings 2` contains uncommitted `data/site.ts` changes matching the Binance vs OKX Brazil guide candidate.
 - `next-env.d.ts` is an unrelated dirty local file and must not be touched by content automation.
