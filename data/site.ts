@@ -353,6 +353,33 @@ export const programs: Program[] = [
     ],
     lastChecked: "2026-06-12",
     keywords: ["okx programa de afiliados", "programas de afiliados cripto"]
+  },
+  {
+    name: "KuCoin",
+    slug: "kucoin-affiliate-program",
+    category: "cripto",
+    officialUrl: "https://www.kucoin.com/affiliate",
+    officialLabel: "KuCoin Affiliate Program",
+    payoutModel: "comissão sobre taxas de spot e futures",
+    commission: "Até 60% de comissão sobre taxas de negociação, com comissões de segundo nível segundo a página oficial",
+    payoutFrequency: "Comissões diárias segundo a página oficial",
+    subAffiliate: "Sistema multi-tier com comissões de segundo nível",
+    bestFor: "criadores, comunidades e sites cripto que querem monetização direta e rede de parceiros",
+    markets: "Disponibilidade e termos variam por país ou região segundo a página oficial",
+    paymentMethods: "Gestão pelo painel da KuCoin; confirmar moeda, saque e entidade aplicável no programa",
+    verdict:
+      "KuCoin é uma expansão forte para o cluster cripto porque publica elegibilidade básica, comissão diária e estrutura multi-tier. Para Brasil, o ponto principal é validar país, entidade contratante e produtos elegíveis antes de projetar receita.",
+    pros: ["Até 60% de comissão", "comissões diárias", "comissão de segundo nível", "dashboard visual com gestão multi-canal"],
+    cons: ["Termos variam por país ou região", "Exige validação da entidade contratante", "Audiência fria tende a converter pior em spot/futures"],
+    affiliateTools: ["links de indicação", "dashboard visual", "gestão de comissão multi-canal", "links com incentivo configurável"],
+    trafficNotes: ["A página oficial aceita criadores, líderes de comunidade, sites cripto e organizações", "O FAQ cita criadores com 5.000+ seguidores e comunidades com 500+ membros", "Faz mais sentido para conteúdo educativo, comunidades e sites com tráfego recorrente do que para promessa de ganho rápido"],
+    complianceNotes: ["A KuCoin informa que disponibilidade e termos variam por país ou região", "Cada afiliado está associado à sua própria entidade contratante segundo a página oficial", "Evite estimar receita para Brasil sem validar spot, futures, KYC e regras locais aplicáveis"],
+    facts: ["A página oficial informa até 60% de comissão sobre taxas de spot e futures", "A KuCoin destaca comissões diárias e relações permanentes com afiliados", "O programa menciona sistema multi-tier com comissões de segundo nível", "O FAQ cita criadores com 5.000+ seguidores ou comunidades com 500+ membros", "A página oficial afirma que disponibilidade e termos podem variar por país ou região"],
+    sources: [
+      { label: "KuCoin Affiliate Program", url: "https://www.kucoin.com/affiliate" }
+    ],
+    lastChecked: "2026-06-19",
+    keywords: ["kucoin programa de afiliados", "kucoin affiliate program", "programas de afiliados cripto"]
   }
 ];
 
@@ -1099,6 +1126,17 @@ export const programDeepDives: Record<string, ProgramDeepDive> = {
     negotiationAngles: ["Peça campanhas personalizadas por fonte", "Valide gestão de sub-afiliados", "Negocie suporte para criadores", "Confirme países e produtos permitidos"],
     redFlags: ["Tráfego iniciante direto para produtos avançados", "Falta de aviso de risco cripto", "Não validar restrições locais", "Medir só cadastro sem volume de negociação"],
     optimizationChecklist: ["Rastrear volume por campanha", "Separar spot/derivativos", "Atualizar disponibilidade por país", "Criar página de destino por nível de experiência", "Revisar termos de sub-afiliado"]
+  },
+  "kucoin-affiliate-program": {
+    overview:
+      "KuCoin é útil para o cluster cripto porque combina comissão pública mais alta, pagamentos diários e estrutura multi-tier. O melhor encaixe é para creators, comunidades e sites que conseguem educar o usuário antes do cadastro e depois medir atividade real em spot e futures.",
+    commissionDeepDive:
+      "O teto de até 60% só faz sentido quando o afiliado acompanha taxa negociada, trader ativo e retenção. A presença de comissão de segundo nível abre espaço para operações com rede, mas exige governança sobre fontes de tráfego e mensagens usadas por parceiros.",
+    bestTrafficSources: ["YouTube e creators cripto", "comunidades em Telegram e Discord", "SEO para reviews e comparativos de exchanges", "sites de ferramentas cripto", "newsletters educativas sobre mercado"],
+    funnelAdvice: ["Explique risco e diferença entre spot e futures antes do clique", "Separe links por canal e por tipo de audiência", "Use páginas comparativas com Binance e OKX para capturar decisão comercial", "Meça cadastro, KYC, primeiro trade e volume negociado em vez de olhar só cliques"],
+    negotiationAngles: ["Mostre tamanho real da comunidade e engajamento", "Peça confirmação sobre país, entidade contratante e produto elegível", "Negocie apoio para campanhas e incentivos personalizados", "Confirme como a comissão de segundo nível aparece no painel"],
+    redFlags: ["Projetar receita para Brasil sem validar país ou entidade", "Mandar iniciantes direto para futures sem camada educacional", "Assumir que comissão de segundo nível dispensa auditoria da rede", "Usar promessa de lucro ou bônus como argumento principal"],
+    optimizationChecklist: ["Rastrear spot e futures separadamente", "Salvar a data de checagem dos termos", "Criar UTMs por creator, comunidade e página", "Medir receita por trader ativo e não só por cadastro", "Revalidar disponibilidade por país antes de ampliar escala"]
   }
 };
 
@@ -1718,11 +1756,11 @@ export const rankingSeoContent: Record<string, RankingSeoContent> = {
   "programas-afiliados-cripto-fintech": {
     ...defaultRankingSeoContent,
     directAnswer:
-      "Programas cripto e fintech funcionam melhor quando o afiliado consegue educar sobre risco, segurança e uso do produto. Binance e OKX podem ser úteis para audiência cripto, mas a disponibilidade local, elegibilidade do afiliado e regras por produto precisam ser validadas antes de criar previsão de receita.",
+      "Programas cripto e fintech funcionam melhor quando o afiliado consegue educar sobre risco, segurança e uso do produto. Binance, OKX e KuCoin podem ser úteis para audiência cripto, mas a disponibilidade local, elegibilidade do afiliado e regras por produto precisam ser validadas antes de criar previsão de receita.",
     bestForBadges: [
       { label: "Marca cripto forte", program: "Binance", reason: "tem reconhecimento alto e comissão sobre taxas de negociação." },
       { label: "Campanhas personalizadas", program: "OKX", reason: "permite segmentar por canal, criador ou comunidade." },
-      { label: "Cluster fintech", program: "Programas cripto", reason: "podem complementar conteúdo sobre trading, pagamentos e exchanges." }
+      { label: "Rede e comissão diária", program: "KuCoin", reason: "combina até 60%, pagamentos diários e comissão de segundo nível." }
     ],
     brazilValidation: [
       "Confirmar disponibilidade do programa no Brasil e requisitos de aprovação de afiliado.",
@@ -2122,6 +2160,61 @@ export const brandReviewSeoContent: Record<string, BrandReviewSeoContent> = {
         question: "Deriv Master Partner é igual a sub-afiliado?",
         answer:
           "É uma estrutura voltada a recrutar e gerir parceiros, mas os termos precisam ser validados com a Deriv. Não trate como renda passiva garantida."
+      }
+    ]
+  },
+  "kucoin-affiliate-program": {
+    primaryKeyword: "programa de afiliados KuCoin",
+    secondaryKeywords: ["KuCoin afiliados", "KuCoin affiliate", "KuCoin referral", "KuCoin comissão", "KuCoin second-tier"],
+    metaTitle: "KuCoin programa de afiliados: comissão, pagamentos e análise",
+    metaDescription:
+      "Análise PT-BR do programa de afiliados KuCoin: até 60% de comissão, pagamentos diários, second-tier, elegibilidade, tráfego e cuidados para Brasil.",
+    h1: "KuCoin programa de afiliados: análise, comissão e pagamentos",
+    quickAnswer:
+      "O programa de afiliados KuCoin pode ser forte para creators, comunidades e sites cripto porque combina até 60% de comissão, pagamentos diários e estrutura multi-tier. Para o público brasileiro, o ponto crítico é confirmar país, entidade contratante, produtos elegíveis e regras locais antes de escalar campanhas.",
+    integrationSteps: [
+      {
+        title: "Aplicação e validação da audiência",
+        body: "A página oficial informa que criadores, comunidades, sites cripto e organizações podem se candidatar. Antes de aplicar, organize links da sua audiência, alcance e histórico de conteúdo."
+      },
+      {
+        title: "Definição do produto e do funil",
+        body: "Separe campanhas para spot e futures porque o perfil de usuário, a comunicação de risco e o potencial de retenção podem mudar bastante."
+      },
+      {
+        title: "Links e incentivos por canal",
+        body: "A KuCoin diz que o afiliado pode criar links especiais com incentivos para os convidados. Use isso para distinguir creators, comunidade, SEO e mídia proprietária."
+      },
+      {
+        title: "Medição de KYC, primeiro trade e trader ativo",
+        body: "A comissão vem da negociação. Não basta medir cadastro: acompanhe volume, recorrência, aprovação e receita líquida por fonte."
+      },
+      {
+        title: "Checagem de país e compliance",
+        body: "A própria página diz que disponibilidade e termos podem variar por país ou região. Confirme a entidade contratante e as regras locais antes de prometer encaixe para Brasil."
+      }
+    ],
+    commissionRows: [
+      { label: "Modelo principal", value: "Comissão sobre taxas de spot e futures", note: "A página oficial fala em até 60%, mas o retorno real depende da atividade do usuário." },
+      { label: "Pagamento", value: "Diário", note: "Bom para caixa, mas confirme moeda, saque e reconciliação dentro do painel." },
+      { label: "Sub-afiliados", value: "Comissões de segundo nível", note: "Útil para operar com rede, desde que haja controle de compliance e atribuição." },
+      { label: "Ponto crítico", value: "Disponibilidade por país", note: "A KuCoin avisa que termos e disponibilidade variam por país ou região." }
+    ],
+    faq: [
+      {
+        question: "Como funciona o programa de afiliados KuCoin?",
+        answer:
+          "O afiliado recebe comissão quando usuários convidados negociam spot ou futures na KuCoin. A página oficial também destaca pagamentos diários, links especiais e comissões de segundo nível."
+      },
+      {
+        question: "KuCoin paga quanto para afiliados?",
+        answer:
+          "A página oficial informa até 60% de comissão sobre taxas de negociação. O valor real depende do produto, da atividade do usuário e dos termos vigentes no seu país ou região."
+      },
+      {
+        question: "KuCoin vale para afiliados brasileiros?",
+        answer:
+          "Pode valer para audiência cripto qualificada, mas a própria KuCoin avisa que disponibilidade e termos variam por país ou região. Antes de promover, confirme entidade contratante, produtos elegíveis e regras locais."
       }
     ]
   }

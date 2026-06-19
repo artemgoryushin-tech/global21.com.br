@@ -28,7 +28,7 @@ Keep entries short, dated, and useful for future automation runs.
 
 ## Completed Runs
 
-No automated content-growth runs have been recorded yet.
+- 2026-06-19: Brazil content growth chose `Brand Expansion` and added a new PT-BR review for `kucoin-affiliate-program`, connected to the crypto/fintech ranking. Source basis was the official KuCoin affiliate page; Brazil availability and contracting-entity claims remain conditional because KuCoin states terms vary by country or region.
 
 ## Active Branch State
 
