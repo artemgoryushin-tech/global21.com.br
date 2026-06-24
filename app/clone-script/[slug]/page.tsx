@@ -15,6 +15,40 @@ export function generateStaticParams() {
   return cloneScriptPages.map((page) => ({ slug: page.slug }));
 }
 
+const platformModules = [
+  "Traderoom",
+  "Conta demo/real",
+  "CRM",
+  "Pagamentos",
+  "KYC/AML",
+  "Risco",
+  "Afiliados",
+  "Reporting"
+];
+
+const launchRoadmap = [
+  {
+    step: "01",
+    title: "Mapear a referência",
+    body: "Transformar a busca por clone script em escopo: jornada do usuário, traderoom, wallet, pagamentos, CRM, afiliados e suporte."
+  },
+  {
+    step: "02",
+    title: "Definir o MVP",
+    body: "Separar módulos obrigatórios do lançamento das melhorias futuras para evitar um script bonito, mas impossível de operar."
+  },
+  {
+    step: "03",
+    title: "Conectar a operação",
+    body: "Planejar KYC, pagamentos, Pix ou métodos locais, antifraude, regras de risco, CRM, afiliados e relatórios antes de comprar tráfego."
+  },
+  {
+    step: "04",
+    title: "QA e go-live",
+    body: "Validar cadastro, depósito, saque, mobile, mensagens de risco, logs, suporte e compliance antes de abrir campanhas."
+  }
+];
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const page = cloneScriptPages.find((item) => item.slug === slug);
@@ -82,6 +116,24 @@ export default async function CloneScriptPage({ params }: PageProps) {
       <JsonLd
         data={{
           "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "@id": `${pageUrl}#software`,
+          name: page.title,
+          url: pageUrl,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, iOS, Android, PWA",
+          description: page.description,
+          provider: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.domain
+          },
+          featureList: [...platformModules, ...page.customization]
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: page.faq.map((item) => ({
             "@type": "Question",
@@ -114,6 +166,16 @@ export default async function CloneScriptPage({ params }: PageProps) {
               {page.title}
             </h1>
             <p className="mt-6 max-w-4xl text-xl leading-9 text-muted">{page.description}</p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {platformModules.map((module) => (
+                <span
+                  key={module}
+                  className="rounded-full border border-brand/15 bg-brand/5 px-3 py-1 text-xs font-black uppercase tracking-[0.02em] text-brand"
+                >
+                  {module}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="visual-card rounded-[2rem] p-6">
             <div className="flex items-center gap-4">
@@ -133,7 +195,16 @@ export default async function CloneScriptPage({ params }: PageProps) {
         </header>
 
         <div className="mt-10">
-          <BeBrokerCTA compact horizontal />
+          <BeBrokerCTA
+            compact
+            horizontal
+            formId="lead-form"
+            contextName={`${page.brandName} platform scope`}
+            contextSlug={`${page.slug}-platform-scope`}
+            requestType={`${page.keyword} white label scope`}
+            title={`Solicitar escopo ${page.brandName}`}
+            description="Envie mercados-alvo, modelo comercial, métodos de pagamento, KYC, CRM, afiliados, apps e prazo. Este briefing não é consultoria jurídica, financeira ou de investimento."
+          />
         </div>
 
         <section className="mt-12 grid gap-5 md:grid-cols-3">
@@ -178,6 +249,22 @@ export default async function CloneScriptPage({ params }: PageProps) {
             </div>
           </section>
 
+          <section className="surface-card mt-8 rounded-[2rem] p-7">
+            <p className="text-xs font-black uppercase tracking-[0.08em] text-brand">
+              Módulos inclusos
+            </p>
+            <h2 className="mt-3 text-balance text-3xl font-black tracking-tight text-ink">
+              Stack operacional para uma plataforma estilo {page.brandName}
+            </h2>
+            <div className="mt-6 grid gap-3 md:grid-cols-4">
+              {platformModules.map((module) => (
+                <div key={module} className="rounded-2xl bg-cream/80 p-4 text-sm font-black text-ink">
+                  {module}
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="mt-8 rounded-[2rem] bg-ink p-7 text-white shadow-soft">
             <h2 className="text-balance text-3xl font-black tracking-tight">
               Limites legais e de marca
@@ -187,6 +274,24 @@ export default async function CloneScriptPage({ params }: PageProps) {
                 <div key={item} className="rounded-2xl bg-white/10 p-4 text-sm font-bold leading-7 text-white/80">
                   {item}
                 </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="surface-card mt-8 rounded-[2rem] p-7">
+            <p className="text-xs font-black uppercase tracking-[0.08em] text-brand">
+              Roteiro de lançamento
+            </p>
+            <h2 className="mt-3 text-balance text-3xl font-black tracking-tight text-ink">
+              Como transformar a referência em produto próprio
+            </h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {launchRoadmap.map((item) => (
+                <article key={item.step} className="rounded-2xl bg-white p-5 shadow-sm">
+                  <span className="text-sm font-black text-accent">{item.step}</span>
+                  <h3 className="mt-3 text-xl font-black tracking-tight text-ink">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">{item.body}</p>
+                </article>
               ))}
             </div>
           </section>

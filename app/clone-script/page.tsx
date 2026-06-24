@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { SectionHeader } from "@/components/SectionHeader";
 import { cloneScriptPages, siteConfig } from "@/data/site";
 
-const pageTitle = "Clone script para broker: alternativa white label para sua marca";
+const pageTitle = "Clone scripts para plataformas de trading, brokers e cripto";
 const pageDescription =
-  "Compare páginas de clone script para marcas de trading e entenda como lançar uma plataforma white label com identidade, cores, domínio e operação próprios.";
+  "Compare clone scripts para trading, brokers forex, opções digitais e cripto, com alternativa white label, módulos de lançamento, compliance e operação com marca própria.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -49,16 +49,28 @@ export default function CloneScriptIndexPage() {
           <div className="surface-card-strong rounded-[2rem] p-7 md:p-10">
             <SectionHeader
               eyebrow="Clone script e white label"
-              title="Clone script para broker sem copiar marcas de terceiros"
-              description="Use a intenção de busca por clone script para entender soluções white label: uma forma de lançar plataforma própria com branding, cores, domínio, CRM e operação sob sua marca."
+              title="Clone scripts para plataformas de trading, brokers e cripto"
+              description="Use buscas por Binomo clone script, Quotex clone script, Binance clone script e termos parecidos para estruturar uma plataforma original: traderoom, CRM, pagamentos, KYC/AML, afiliados, reporting e compliance."
               titleAs="h1"
             />
             <div className="mt-7 rounded-3xl bg-cream/80 p-5">
               <p className="text-sm font-bold leading-7 text-muted">
                 O termo clone script aparece em buscas comerciais, mas a abordagem segura é white label:
-                não copiar logotipo, layout, domínio, materiais ou propriedade intelectual de Pocket Option,
-                Quotex, IQ Option, Olymp Trade, Deriv ou qualquer outra marca.
+                não copiar logotipo, layout, domínio, materiais ou propriedade intelectual de Binomo,
+                Pocket Option, Quotex, IQ Option, Binance, Exness ou qualquer outra marca.
               </p>
+            </div>
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              {[
+                ["Opções digitais", "Traderoom, conta demo/real, CRM, pagamentos, afiliados e mensagens de risco."],
+                ["Broker forex", "Gabinete do trader, IB, KYC, pagamentos, relatórios e governança de parceiros."],
+                ["Cripto", "Wallet, ledger, segurança, KYC/AML, referral, monitoramento e suporte operacional."]
+              ].map(([title, copy]) => (
+                <div key={title} className="rounded-2xl bg-white p-4 shadow-sm">
+                  <p className="text-sm font-black text-ink">{title}</p>
+                  <p className="mt-2 text-sm leading-6 text-muted">{copy}</p>
+                </div>
+              ))}
             </div>
           </div>
 
