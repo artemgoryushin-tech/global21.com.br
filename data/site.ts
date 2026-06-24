@@ -961,6 +961,132 @@ export const whiteLabelPages: WhiteLabelPage[] = [
       { label: "CPA vs RevShare", href: "/guias/cpa-vs-revshare-vs-hybrid" },
       { label: "Programa vs marca própria", href: "/guias/affiliate-program-vs-own-broker-brand" }
     ]
+  },
+  {
+    slug: "plataforma-de-trading-white-label",
+    title: "Plataforma de trading white label: módulos para lançar sua marca",
+    description:
+      "Veja como avaliar uma plataforma de trading white label com traderoom, conta demo e real, CRM, pagamentos, KYC/AML, afiliados, reporting e compliance.",
+    keyword: "plataforma de trading white label",
+    sections: [
+      {
+        title: "White label como caminho para marca própria",
+        body: "Uma plataforma de trading white label permite lançar uma operação com marca, domínio, páginas, funil e comunicação próprios. A tecnologia reduz o caminho inicial, mas não substitui decisões sobre produto, suporte, pagamentos, compliance, aquisição e atendimento."
+      },
+      {
+        title: "Módulos essenciais",
+        body: "O escopo deve incluir traderoom, conta demo e real, user cabinet, wallet, depósitos, saques, CRM, KYC/AML, antifraude, relatórios, afiliados, suporte e logs de auditoria. Sem esses módulos, a operação depende de controles manuais difíceis de escalar."
+      },
+      {
+        title: "Brasil, LATAM e pagamentos",
+        body: "Para público brasileiro ou LATAM, avalie idioma, suporte, Pix quando aplicável, provedores de pagamento, reconciliação, chargebacks, limites, documentação do usuário e mensagens de risco. Conversão de depósito não pode ser analisada separada de suporte e compliance."
+      },
+      {
+        title: "Quando faz sentido para afiliados",
+        body: "A marca própria costuma fazer mais sentido quando o afiliado já mede CAC, FTD, qualidade do trader, retenção e LTV. Antes disso, uma white label pode virar custo fixo sem tráfego qualificado suficiente para validar a operação."
+      }
+    ],
+    faq: [
+      {
+        question: "Plataforma de trading white label é uma corretora pronta?",
+        answer:
+          "Não completamente. A tecnologia pode acelerar o lançamento, mas entidade, produto, pagamentos, suporte, aquisição, compliance e comunicação de risco continuam sob responsabilidade do operador."
+      },
+      {
+        question: "Quais módulos devo pedir no escopo?",
+        answer:
+          "Traderoom, conta demo/real, CRM, pagamentos, KYC/AML, antifraude, afiliados, reporting, suporte, logs de auditoria, avisos de risco e regras por mercado."
+      }
+    ],
+    relatedLinks: [
+      { label: "Binomo clone script", href: "/clone-script/binomo-clone-script" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" },
+      { label: "Quanto custa lançar", href: "/white-label/quanto-custa-lancar-plataforma-trading" }
+    ]
+  },
+  {
+    slug: "crm-para-broker-forex",
+    title: "CRM para broker forex: leads, IB, afiliados, KYC e backoffice",
+    description:
+      "Entenda como avaliar CRM para broker forex com gestão de leads, FTD, KYC, depósitos, saques, IB, afiliados, suporte, relatórios e compliance.",
+    keyword: "CRM para broker forex",
+    sections: [
+      {
+        title: "CRM é o centro operacional do broker",
+        body: "Um CRM para broker forex conecta aquisição, cadastro, KYC, depósitos, saques, suporte, retenção, IBs, afiliados e compliance. Sem esse painel, fica difícil entender se o tráfego gera traders qualificados ou apenas volume caro de suporte."
+      },
+      {
+        title: "Do clique ao trader ativo",
+        body: "O CRM deve registrar origem, campanha, subID, cadastro, status de KYC, primeiro depósito, trader ativo, atividade, solicitações de saque, tickets, reclamações e eventos de retenção. Essa visão permite medir CPA real, LTV e qualidade do canal."
+      },
+      {
+        title: "IB, afiliados e parceiros",
+        body: "Para operações com IB ou afiliados, avalie links por parceiro, rebates, CPA, RevShare, sub-afiliados, relatórios por fonte, regras de mídia, payout status e alertas de tráfego proibido ou suspeito."
+      },
+      {
+        title: "Compliance e atendimento",
+        body: "Forex e CFDs exigem comunicação conservadora, avisos de risco, controles por país, trilha de auditoria, revisão de documentos e processo claro para reclamações. O CRM precisa tornar esses pontos visíveis no dia a dia da equipe."
+      }
+    ],
+    faq: [
+      {
+        question: "CRM para broker forex é só gestão de leads?",
+        answer:
+          "Não. Além de leads, ele deve cobrir KYC, depósitos, saques, suporte, parceiros, relatórios, retenção, compliance, auditoria e qualidade do tráfego."
+      },
+      {
+        question: "Afiliado precisa entender CRM de broker?",
+        answer:
+          "Sim, principalmente se pensa em marca própria. CRM afeta visibilidade de FTD, payout, qualidade do lead, suporte, reversões e retenção."
+      }
+    ],
+    relatedLinks: [
+      { label: "Exness clone script", href: "/clone-script/exness-clone-script" },
+      { label: "SEO para afiliados forex", href: "/guias/seo-para-afiliados-forex" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "exchange-cripto-white-label",
+    title: "Exchange cripto white label: módulos, segurança e compliance",
+    description:
+      "Planeje uma exchange cripto white label com wallet, ledger, KYC/AML, trading, liquidez, referral, suporte, segurança, monitoramento e reporting.",
+    keyword: "exchange cripto white label",
+    sections: [
+      {
+        title: "Exchange cripto não é apenas interface",
+        body: "Uma exchange cripto white label precisa ser avaliada como infraestrutura operacional: wallet, ledger, saldos, depósitos, saques, limites, monitoramento, suporte, incidentes, KYC/AML e governança administrativa. O visual é apenas uma parte do risco."
+      },
+      {
+        title: "Wallet, ledger e reconciliação",
+        body: "O escopo deve explicar como saldos, transações, status, taxas, limites, bloqueios, reversões e auditoria aparecem para usuário e equipe. Sem ledger confiável, qualquer crescimento de tráfego aumenta risco operacional."
+      },
+      {
+        title: "KYC/AML, segurança e monitoramento",
+        body: "Cripto exige atenção a verificação, sanções, risco de transação, alertas, acesso administrativo, logs, resposta a incidentes, suporte e regras por mercado. Esses módulos devem ser considerados antes de campanhas e referral."
+      },
+      {
+        title: "Referral e afiliados",
+        body: "Referral pode ajudar aquisição, mas precisa de antifraude, regras de mídia, subIDs, relatórios, limites por campanha e clareza sobre bônus. Em cripto, aquisição agressiva sem controle aumenta risco regulatório e reputacional."
+      }
+    ],
+    faq: [
+      {
+        question: "Exchange cripto white label substitui revisão jurídica?",
+        answer:
+          "Não. Mesmo com fornecedor de tecnologia, o operador precisa revisar jurisdição, KYC/AML, custódia, publicidade, suporte, segurança e responsabilidades comerciais."
+      },
+      {
+        question: "Qual é o maior risco de uma exchange cripto pronta?",
+        answer:
+          "O maior risco costuma estar em wallet, ledger, segurança, liquidez, KYC/AML, suporte e incident response, não apenas no design da interface."
+      }
+    ],
+    relatedLinks: [
+      { label: "Binance clone script", href: "/clone-script/binance-clone-script" },
+      { label: "Binance vs OKX", href: "/guias/binance-vs-okx-afiliados" },
+      { label: "Quanto custa lançar", href: "/white-label/quanto-custa-lancar-plataforma-trading" }
+    ]
   }
 ];
 
