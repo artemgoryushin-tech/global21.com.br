@@ -1894,6 +1894,228 @@ export const cloneScriptPages: CloneScriptPage[] = [
     ]
   },
   {
+    slug: "okx-clone-script",
+    brandName: "OKX",
+    brandSlug: "okx-affiliate-program",
+    title: "Clone script OKX: escopo para exchange cripto white label",
+    description:
+      "Planeje uma plataforma estilo OKX com marca própria: wallet, ledger, KYC/AML, trading, referral, segurança, suporte, reporting e compliance.",
+    keyword: "clone script OKX",
+    productModel: "Exchange cripto, broker, wallet, referral e operação segura",
+    bestFor: "Operadores que querem avaliar produto cripto próprio sem copiar marca, telas ou comunicação da OKX.",
+    customization: [
+      "Marca, domínio, interface, termos e jornada de usuário próprios",
+      "Wallet, ledger, depósitos, saques, limites e reconciliação",
+      "KYC/AML, monitoramento, suporte, segurança e logs de auditoria",
+      "Referral, afiliados, subIDs, campanhas e regras antifraude"
+    ],
+    legalBoundaries: [
+      "Não usar marca, logotipo, domínio, screenshots ou materiais da OKX",
+      "Não sugerir parceria oficial, autorização ou relação comercial com a OKX",
+      "Não prometer valorização, lucro garantido ou trading sem risco",
+      "Validar custódia, KYC/AML, segurança, jurisdição e publicidade antes do lançamento"
+    ],
+    sections: [
+      { title: "OKX clone script como briefing de produto", body: `${cloneScriptDisclaimer} Em cripto, a busca deve virar um escopo de módulos: wallet, ledger, trading ou swap, KYC/AML, segurança, suporte, referral e reporting.` },
+      { title: "Operação antes de aquisição", body: "Antes de tráfego e afiliados, defina saldos, transações, limites, saques, monitoramento, incident response, suporte e responsabilidades legais da operação." },
+      { title: "Referral com governança", body: "Programas de referral precisam de antifraude, regras de mídia, subIDs, payout status, limites por campanha e comunicação clara sobre risco de criptoativos." }
+    ],
+    faq: [
+      { question: "Posso copiar a OKX?", answer: "Não. O caminho recomendado é uma plataforma cripto original, sem copiar marca, interface, domínio, textos ou materiais protegidos da OKX." },
+      { question: "Quais módulos importam mais?", answer: "Wallet, ledger, KYC/AML, segurança, trading ou swap, suporte, referral, reporting, limites e logs de auditoria." }
+    ],
+    relatedLinks: [
+      { label: "Exchange cripto white label", href: "/white-label/exchange-cripto-white-label" },
+      { label: "Binance clone script", href: "/clone-script/binance-clone-script" },
+      { label: "Binance vs OKX", href: "/guias/binance-vs-okx-afiliados" }
+    ]
+  },
+  {
+    slug: "bybit-clone-script",
+    brandName: "Bybit",
+    brandSlug: "bybit-clone-script",
+    title: "Clone script Bybit: plataforma cripto com trading e referral",
+    description:
+      "Entenda como estruturar uma alternativa white label inspirada em exchange/trading cripto, com wallet, KYC/AML, CRM, referral, segurança e compliance.",
+    keyword: "clone script Bybit",
+    productModel: "Trading cripto, exchange, referral, KYC/AML e segurança operacional",
+    bestFor: "Times que querem avaliar uma operação cripto própria com tráfego de afiliados, creators ou comunidades.",
+    customization: [
+      "Interface, domínio, marca, termos e páginas de onboarding próprios",
+      "Wallet, trading, depósitos, saques, limites e histórico",
+      "KYC/AML, segurança, monitoramento, suporte e incident response",
+      "Referral, afiliados, campanhas, subIDs e relatórios por fonte"
+    ],
+    legalBoundaries: [
+      "Não usar marca, telas, domínio, materiais ou comunicação da Bybit",
+      "Não simular página oficial ou relação autorizada",
+      "Não promover leverage, derivativos ou trading como resultado previsível",
+      "Revisar jurisdição, produto, KYC/AML, pagamentos e publicidade"
+    ],
+    sections: [
+      { title: "Da busca para o escopo", body: `${cloneScriptDisclaimer} Bybit clone script costuma indicar interesse por trading cripto, referral e UX de exchange. A entrega segura precisa ser original e revisada para segurança e compliance.` },
+      { title: "Risco, liquidez e suporte", body: "Defina modelo de execução, liquidez, limites, saques, suporte, monitoramento, logs e regras de risco antes de abrir campanhas." },
+      { title: "Aquisição por parceiros", body: "Creators, afiliados e comunidades precisam de regras claras, relatórios, subIDs, antifraude, payout status e limites promocionais." }
+    ],
+    faq: [
+      { question: "Bybit clone script é suficiente para lançar?", answer: "Não. Uma operação real exige wallet, KYC/AML, segurança, liquidez, suporte, reporting, compliance e marca própria." },
+      { question: "O que é mais importante que o visual?", answer: "Segurança, ledger, pagamentos, KYC/AML, suporte, limites, logs, governança de afiliados e revisão jurídica." }
+    ],
+    relatedLinks: [
+      { label: "Exchange cripto white label", href: "/white-label/exchange-cripto-white-label" },
+      { label: "OKX clone script", href: "/clone-script/okx-clone-script" },
+      { label: "Binance clone script", href: "/clone-script/binance-clone-script" }
+    ]
+  },
+  {
+    slug: "kucoin-clone-script",
+    brandName: "KuCoin",
+    brandSlug: "kucoin-affiliate-program",
+    title: "Clone script KuCoin: requisitos para exchange cripto",
+    description:
+      "Avalie uma plataforma estilo KuCoin com wallet, ledger, KYC/AML, trading, referral, CRM, suporte, segurança e operação com marca própria.",
+    keyword: "clone script KuCoin",
+    productModel: "Exchange cripto, wallet, referral, suporte e monitoramento",
+    bestFor: "Operadores que precisam entender módulos de exchange antes de contratar fornecedor white label.",
+    customization: [
+      "Marca, domínio, interface, onboarding e termos próprios",
+      "Wallet, ledger, depósitos, saques, limites e reconciliação",
+      "KYC/AML, monitoramento, suporte, tickets e logs",
+      "Referral, campanhas, relatórios, antifraude e payout status"
+    ],
+    legalBoundaries: [
+      "Não usar marca, logotipo, screenshots ou materiais da KuCoin",
+      "Não sugerir relação oficial com a KuCoin",
+      "Não minimizar risco de criptoativos ou prometer retorno",
+      "Validar custódia, segurança, jurisdição, KYC/AML e publicidade"
+    ],
+    sections: [
+      { title: "Exchange como infraestrutura", body: `${cloneScriptDisclaimer} A intenção KuCoin clone script deve ser tratada como checklist de exchange: ledger, wallet, trading, KYC/AML, suporte, segurança e referral.` },
+      { title: "Ledger primeiro", body: "Saldos, estados de transação, limites, bloqueios, reconciliação e auditoria precisam ser confiáveis antes de qualquer crescimento de tráfego." },
+      { title: "Suporte e disputas", body: "Depósitos falhos, saques em revisão, contas bloqueadas e tickets precisam de processos claros para reduzir risco operacional." }
+    ],
+    faq: [
+      { question: "Posso copiar o design da KuCoin?", answer: "Não. A plataforma deve ter identidade própria, sem copiar marca, layout, materiais ou comunicação da KuCoin." },
+      { question: "Quais módulos pedir no fornecedor?", answer: "Wallet, ledger, KYC/AML, trading ou swap, CRM, suporte, referral, segurança, reporting e logs de auditoria." }
+    ],
+    relatedLinks: [
+      { label: "Exchange cripto white label", href: "/white-label/exchange-cripto-white-label" },
+      { label: "Binance afiliados", href: "/reviews/binance-affiliate-program" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "bitget-clone-script",
+    brandName: "Bitget",
+    brandSlug: "bitget-clone-script",
+    title: "Clone script Bitget: exchange, copy trading e referral cripto",
+    description:
+      "Planeje uma plataforma estilo Bitget com marca própria, wallet, copy trading, KYC/AML, referral, segurança, CRM, reporting e compliance.",
+    keyword: "clone script Bitget",
+    productModel: "Trading cripto, copy trading, referral, wallet e compliance",
+    bestFor: "Times que querem combinar aquisição cripto, creators, afiliados e possível copy trading com operação controlada.",
+    customization: [
+      "Marca, domínio, interface, onboarding e termos próprios",
+      "Wallet, trading, copy trading, depósitos, saques e histórico",
+      "KYC/AML, segurança, monitoramento, suporte e reporting",
+      "Referral, afiliados, creators, subIDs e regras antifraude"
+    ],
+    legalBoundaries: [
+      "Não copiar marca, telas, domínio ou materiais da Bitget",
+      "Não sugerir parceria oficial ou autorização",
+      "Não prometer copy trading garantido, renda passiva ou lucro previsível",
+      "Validar cripto, derivativos, copy trading, KYC/AML e publicidade por mercado"
+    ],
+    sections: [
+      { title: "Copy trading exige cuidado extra", body: `${cloneScriptDisclaimer} Se copy trading estiver no escopo, defina líderes, consentimento de seguidores, limites, fees, exibição de performance e mensagens de risco.` },
+      { title: "Wallet e trading", body: "Saldos, transações, ordens, saques, suporte e monitoramento precisam estar maduros antes de creators ou afiliados escalarem tráfego." },
+      { title: "Relatórios por canal", body: "Separe referral, creators, afiliados, usuários financiados, traders ativos, churn, reclamações e suporte para entender a real qualidade da aquisição." }
+    ],
+    faq: [
+      { question: "Bitget clone script significa copiar a Bitget?", answer: "Não. O termo deve virar escopo funcional para uma plataforma original com marca própria e revisão jurídica." },
+      { question: "Copy trading pode entrar em white label?", answer: "Pode ser escopado, mas exige consentimento, avisos de risco, controle de líderes, regras de performance e compliance." }
+    ],
+    relatedLinks: [
+      { label: "Exchange cripto white label", href: "/white-label/exchange-cripto-white-label" },
+      { label: "Bybit clone script", href: "/clone-script/bybit-clone-script" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "tradingview-clone-script",
+    brandName: "TradingView",
+    brandSlug: "tradingview-clone-script",
+    title: "Clone script TradingView: gráficos, alertas e ferramentas de trading",
+    description:
+      "Escopo para uma plataforma estilo TradingView com gráficos, watchlists, indicadores, alertas, contas, assinaturas, integrações e limites de compliance.",
+    keyword: "clone script TradingView",
+    productModel: "Gráficos, indicadores, alertas, watchlists, comunidade e integrações",
+    bestFor: "Projetos que querem produto de ferramentas de trading, conteúdo, assinaturas ou integrações com brokers.",
+    customization: [
+      "Marca, domínio, interface, planos e onboarding próprios",
+      "Gráficos, watchlists, layouts, indicadores, alertas e templates",
+      "Contas, assinaturas, permissões, comunidade e moderação",
+      "Integrações com dados, brokers ou exchanges conforme licença"
+    ],
+    legalBoundaries: [
+      "Não copiar marca, interface, scripts, marketplace ou materiais da TradingView",
+      "Não usar dados de mercado sem licença adequada",
+      "Não vender indicadores ou alertas como sinais garantidos",
+      "Revisar integrações, conteúdo de usuários, disclaimers e direitos de dados"
+    ],
+    sections: [
+      { title: "Mais ferramenta do que broker", body: `${cloneScriptDisclaimer} TradingView clone script normalmente significa gráficos, watchlists, alertas, indicadores, comunidade ou integrações, não uma corretora completa.` },
+      { title: "Dados e integrações", body: "Market data, brokers e exchanges exigem licenciamento, regras de exibição, latência, disponibilidade e responsabilidades claras." },
+      { title: "Monetização", body: "O produto pode monetizar assinaturas, ferramentas premium, widgets B2B ou referrals de brokers, sempre com divulgação comercial e disclaimers." }
+    ],
+    faq: [
+      { question: "O que é um clone script TradingView?", answer: "É um briefing para plataforma de gráficos e ferramentas: charts, watchlists, indicadores, alertas, contas, integrações e assinaturas com marca própria." },
+      { question: "Posso usar dados de mercado de terceiros?", answer: "Apenas se a licença permitir. Direitos de dados, exibição, redistribuição e latência precisam ser revisados." }
+    ],
+    relatedLinks: [
+      { label: "Plataforma de trading white label", href: "/white-label/plataforma-de-trading-white-label" },
+      { label: "CRM para broker forex", href: "/white-label/crm-para-broker-forex" },
+      { label: "Solução white label", href: "/white-label/solucao-white-label-para-broker" }
+    ]
+  },
+  {
+    slug: "etoro-clone-script",
+    brandName: "eToro",
+    brandSlug: "etoro-clone-script",
+    title: "Clone script eToro: social trading e copy trading com marca própria",
+    description:
+      "Veja como planejar uma plataforma estilo eToro com social trading, copy trading, perfis, KYC, pagamentos, CRM, risco, afiliados e compliance.",
+    keyword: "clone script eToro",
+    productModel: "Social trading, copy trading, perfis, KYC, CRM e afiliados",
+    bestFor: "Operadores que querem avaliar produto de social/copy trading com onboarding, suporte e governança de performance.",
+    customization: [
+      "Marca, domínio, perfis, feed, onboarding e termos próprios",
+      "Copy trading, consentimento, alocação, limites e exibição de performance",
+      "KYC, pagamentos, suporte, CRM, relatórios e reclamações",
+      "Afiliados, creators, referral, subIDs e regras de mídia"
+    ],
+    legalBoundaries: [
+      "Não copiar marca, telas, materiais ou comunicação da eToro",
+      "Não sugerir relação oficial ou autorização",
+      "Não prometer performance, copy trading garantido ou renda passiva",
+      "Revisar suitability, KYC, pagamentos, divulgação de risco e publicidade por mercado"
+    ],
+    sections: [
+      { title: "Social trading não é só UI", body: `${cloneScriptDisclaimer} Um escopo estilo eToro precisa cobrir perfis, consentimento, performance, risco, KYC, suporte, CRM, pagamentos e compliance.` },
+      { title: "Copy trading e performance", body: "Defina regras para líderes, seguidores, consentimento, stop, fees, exibição de retorno, histórico e avisos de risco antes de escalar aquisição." },
+      { title: "Aquisição e retenção", body: "Afiliados e creators podem ajudar, mas exigem regras de mídia, disclosure, tracking, relatórios e controle de promessas agressivas." }
+    ],
+    faq: [
+      { question: "eToro clone script é uma cópia da eToro?", answer: "Não deveria ser. A abordagem correta é um produto original de social/copy trading com marca própria e revisão de compliance." },
+      { question: "Qual é o maior risco em copy trading?", answer: "Promessas de performance, suitability, consentimento, KYC, avisos de risco, reclamações e restrições por mercado." }
+    ],
+    relatedLinks: [
+      { label: "Plataforma de trading white label", href: "/white-label/plataforma-de-trading-white-label" },
+      { label: "Bitget clone script", href: "/clone-script/bitget-clone-script" },
+      { label: "Compliance Brasil", href: "/guias/checklist-compliance-afiliados-trading-brasil" }
+    ]
+  },
+  {
     slug: "exness-clone-script",
     brandName: "Exness",
     brandSlug: "exness-affiliate-program",
