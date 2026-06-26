@@ -28,6 +28,7 @@ Keep entries short, dated, and useful for future automation runs.
 
 ## Completed Runs
 
+- 2026-06-26: Brazil content growth chose `Existing Content Refresh` and refreshed Exness PT-BR affiliate content plus related forex ranking/comparison copy. Source basis was the official Exness affiliate page; XM page access was blocked in the local environment, so XM claims were left conservative and not re-dated.
 - 2026-06-19: Brazil content growth chose `Brand Expansion` and added a new PT-BR review for `kucoin-affiliate-program`, connected to the crypto/fintech ranking. Source basis was the official KuCoin affiliate page; Brazil availability and contracting-entity claims remain conditional because KuCoin states terms vary by country or region.
 
 ## Active Branch State

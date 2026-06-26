@@ -174,18 +174,18 @@ export const programs: Program[] = [
     markets: "5 regiões principais no CPA: MENA, APAC, SSA, LATAM e CIS",
     paymentMethods: "Transferência, carteiras digitais e métodos locais",
     verdict:
-      "Uma das ofertas mais claras para comparação CPA: a página oficial mostra pagamento máximo por região, pagamentos diários e material promocional robusto.",
+      "Uma das ofertas mais claras para comparação CPA: a página oficial mostra pagamento máximo por região, pagamentos diários, material promocional robusto e critérios ligados a localização, depósito e atividade.",
     pros: ["CPA até US$1,850", "Pagamentos diários", "5,000+ criativos", "Rastreamento em tempo real", "Aceita blogs, canais privados e comunidades"],
     cons: ["CPA depende de região, FTD e volume de negociação", "Tráfego precisa ser qualificado", "Forex/CFDs exigem avisos de risco fortes"],
     affiliateTools: ["Links profundos", "central de materiais promocionais", "Integrações com ferramentas de rastreamento", "área pessoal do parceiro"],
-    trafficNotes: ["Página oficial cita educadores financeiros, comunidades privadas, blogs, comunidades em redes sociais e influenciadores", "LATAM aparece com CPA máximo de US$960", "IB pode fazer sentido para afiliados com público trader mais ativo"],
-    complianceNotes: ["CFDs são produtos de alto risco", "Evitar alegações de renda", "Separar conteúdo educacional de recomendação financeira"],
-    facts: ["CPA máximo por região: MENA US$1,850, APAC US$1,760, SSA US$1,080, LATAM US$960, CIS US$680", "Exness diferencia afiliado CPA de Introducing Broker recorrente", "Página oficial menciona mais de 75 mil afiliados"],
+    trafficNotes: ["Página oficial cita educadores financeiros, comunidades privadas, blogs, comunidades em redes sociais e influenciadores", "LATAM aparece com CPA máximo de US$960", "IB pode fazer sentido para afiliados com público trader ativo e volume recorrente"],
+    complianceNotes: ["CFDs são produtos complexos e de alto risco", "Evitar alegações de renda ou recomendação de investimento", "Separar conteúdo educacional de CTA comercial e validar a entidade aplicável antes de promover no Brasil"],
+    facts: ["CPA máximo por região: MENA US$1,850, APAC US$1,760, SSA US$1,080, LATAM US$960, CIS US$680", "Exness diferencia afiliado CPA de Introducing Broker recorrente", "A página oficial informa que atrasos podem ocorrer quando clientes indicados ainda não cumprem critérios de depósito ou trading", "Página oficial menciona mais de 75 mil afiliados"],
     sources: [
       { label: "Exness programa de afiliados", url: "https://www.exnessaffiliates.com/affiliate-program/" },
       { label: "Página inicial da Exness Affiliates", url: "https://www.exnessaffiliates.com/" }
     ],
-    lastChecked: "2026-04-28",
+    lastChecked: "2026-06-26",
     keywords: ["exness programa de afiliados", "programa de afiliados forex"]
   },
   {
@@ -1178,14 +1178,14 @@ export const programDeepDives: Record<string, ProgramDeepDive> = {
   },
   "exness-affiliate-program": {
     overview:
-      "Exness é uma das opções mais fortes para afiliados forex porque a proposta pública de CPA é clara por região e a marca comunica estrutura de rastreamento, criativos e pagamentos diários. É mais adequada para tráfego financeiro educado do que para campanhas genéricas de renda extra.",
+      "Exness é uma das opções mais fortes para afiliados forex porque a proposta pública de CPA é clara por região e a marca comunica estrutura de rastreamento, criativos, suporte de gerente e pagamentos diários. É mais adequada para tráfego financeiro educado do que para campanhas genéricas de renda extra.",
     commissionDeepDive:
-      "O CPA máximo varia por região e depende de critérios como depósito e volume de negociação. Para LATAM, o teto divulgado é menor que MENA/APAC, então o afiliado precisa calcular ROI local e comparar com IB/RevShare quando a audiência gera volume de trading consistente.",
+      "O CPA máximo varia por região e depende de localização, primeiro depósito e atividade na plataforma. Para LATAM, o teto divulgado é menor que MENA/APAC, então o afiliado precisa calcular ROI local e comparar com IB quando a audiência gera volume de trading consistente.",
     bestTrafficSources: ["SEO forex e comparadores de brokers", "YouTube educativo sobre CFDs e risco", "Comunidades privadas de traders", "newsletter de análise de mercado", "Páginas de ferramentas como calculadoras de spread e lotes"],
     funnelAdvice: ["Eduque sobre risco antes do CTA", "Crie comparativos por região e tipo de conta", "Use conteúdo de alta intenção como 'melhores programas de afiliados de brokers forex'", "Separe tráfego iniciante de trader avançado"],
     negotiationAngles: ["Mostre qualidade por FTD e volume de negociação", "Pergunte se IB é melhor para seu público", "Negocie materiais em português", "Peça detalhes do período de validação e critérios de trader qualificado"],
-    redFlags: ["Comprar tráfego de curiosidade sem educação", "Prometer lucro com CFDs", "Não entender critérios por região", "Comparar CPA bruto sem considerar aprovação"],
-    optimizationChecklist: ["Medir FTD qualificado, não só cadastro", "Calcular CPA líquido após reprovações", "Testar páginas educativas com conteúdo longo", "Comparar afiliado vs IB", "Atualizar tabela regional de CPA"]
+    redFlags: ["Comprar tráfego de curiosidade sem educação", "Prometer lucro com CFDs", "Não entender critérios por região", "Comparar CPA bruto sem considerar aprovação", "Tratar presença regional como disponibilidade automática para Brasil"],
+    optimizationChecklist: ["Medir FTD qualificado, não só cadastro", "Calcular CPA líquido após reprovações", "Testar páginas educativas com conteúdo longo", "Comparar afiliado vs IB", "Atualizar tabela regional de CPA e critérios de qualificação"]
   },
   "xm-affiliate-program": {
     overview:
@@ -2250,7 +2250,7 @@ export const rankingSeoContent: Record<string, RankingSeoContent> = {
   "melhores-programas-afiliados-forex": {
     ...defaultRankingSeoContent,
     directAnswer:
-      "Para afiliados brasileiros, os melhores programas forex tendem a combinar marca confiável, CPA ou IB transparente, pagamentos previsíveis e materiais educativos. Exness, XM e AvaPartner aparecem como opções fortes, mas cada uma exige validação de país, entidade e critérios de qualificação.",
+      "Para afiliados brasileiros, os melhores programas forex tendem a combinar marca confiável, CPA ou IB transparente, pagamentos previsíveis, materiais educativos e critérios claros de FTD/trader qualificado. Exness, XM e AvaPartner aparecem como opções fortes, mas cada uma exige validação de país, entidade e critérios de qualificação.",
     bestForBadges: [
       { label: "CPA regional claro", program: "Exness", reason: "divulga CPA máximo por regiões e diferencia CPA de IB." },
       { label: "Sub-afiliados", program: "XM", reason: "comunica 10% extra sobre ganhos de sub-afiliados." },
@@ -2418,7 +2418,7 @@ export const rankingSeoContent: Record<string, RankingSeoContent> = {
   "melhores-programas-afiliados-cpa-forex": {
     ...defaultRankingSeoContent,
     directAnswer:
-      "CPA forex é melhor quando você compra tráfego e precisa previsibilidade, mas só deve ser comparado pelo valor líquido depois de aprovações, reversões, volume mínimo e período de validação.",
+      "CPA forex é melhor quando você compra tráfego e precisa previsibilidade, mas só deve ser comparado pelo valor líquido depois de aprovações, reversões, primeiro depósito, atividade mínima e período de validação.",
     bestForBadges: [
       { label: "CPA por região", program: "Exness", reason: "torna a projeção inicial mais objetiva." },
       { label: "CPA negociável", program: "AvaPartner", reason: "permite planos personalizados por fonte e qualidade." },
@@ -2909,7 +2909,7 @@ const guideFaqs: Record<string, FaqContent[]> = {
     {
       question: "Exness ou XM é melhor para afiliados brasileiros?",
       answer:
-        "Depende do canal. Exness tende a ser mais objetiva para CPA por região; XM pode ser interessante para conteúdo forex, marca e sub-afiliados. Confirme termos atuais."
+        "Depende do canal. Exness tende a ser mais objetiva para CPA por região e critérios de qualificação; XM pode ser interessante para conteúdo forex, marca e sub-afiliados. Confirme termos atuais."
     },
     {
       question: "Posso promover os dois programas no mesmo site?",
