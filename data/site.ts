@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "AfiliadosPro Brasil",
-  domain: "https://afiliadosprobr.com",
+  domain: "https://global21.com.br",
   description:
     "Guias, rankings e análises independentes sobre programas de afiliados para brokers, forex, trading e fintech no Brasil.",
   locale: "pt_BR"
@@ -1424,7 +1424,7 @@ export const guideDeepDives: Record<string, GuideDeepDive> = {
 export const editorialProfile = {
   author: "Equipe editorial AfiliadosPro Brasil",
   reviewer: "Revisão comercial e compliance editorial",
-  lastUpdated: "2026-04-29",
+  lastUpdated: "2026-06-29",
   policyUrl: "/metodologia",
   disclosureUrl: "/divulgacao",
   riskNotice:
